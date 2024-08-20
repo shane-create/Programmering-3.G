@@ -7,5 +7,6 @@ eksamensB.onclick = function () {
 };
 
 class1B.onclick = function () {
-  window.location.href = "class1/class1.html";
+  window.location.href =
+    "https://shane-create.github.io/Programmering-3.G/class1/class1.html";
 };
