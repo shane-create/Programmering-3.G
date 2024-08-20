@@ -12,6 +12,13 @@
   overflow: hidden;
 }
 
+#bb {
+  background-color: #0883d6;
+  padding: 10px;
+  color: white;
+  height: 50px;
+}
+
 .page-title {
   color: blue;
   font-size: 50px;
@@ -25,4 +32,5 @@
   height: 80vh;
   overflow: hidden;
   display: grid;
+  justify-content: center;
 }
