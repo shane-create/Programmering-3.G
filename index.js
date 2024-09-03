@@ -14,5 +14,5 @@ class1B.onclick = function () {
 
 webApp.onclick = function () {
   window.location.href =
-    "https://shane-create.github.io/Programmering-3.G/web-app/web-app.html";
+    "https://shane-create.github.io/Programmering-3.G/webApp/web-app.html";
 };
