@@ -1,0 +1,104 @@
+:root {
+  --purple: invert(79%) sepia(69%) saturate(6996%) hue-rotate(243deg)
+    brightness(104%) contrast(101%);
+  --red: invert(66%) sepia(14%) saturate(3798%) hue-rotate(313deg)
+    brightness(98%) contrast(113%);
+  --yellow: invert(87%) sepia(34%) saturate(640%) hue-rotate(346deg)
+    brightness(104%) contrast(101%);
+  --white: invert(94%) sepia(95%) saturate(18%) hue-rotate(297deg)
+    brightness(104%) contrast(104%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+#menu-background {
+  background-color: #6c0aa8;
+  position: fixed;
+  width: 100vw;
+  height: 16vh;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  display: grid;
+  grid-template-columns: 1.5fr 3fr 1.5fr;
+}
+
+#menu {
+  grid-column: 2/2;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+#menu-1 {
+  grid-column: 1 /1;
+}
+
+#menu-2 {
+  grid-column: 2 /2;
+}
+
+#menu-3 {
+  grid-column: 3/3;
+}
+
+#menu-4 {
+  grid-column: 4 /4;
+}
+
+#menu-5 {
+  grid-column: 5 /5;
+}
+
+.menuItem {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  align-content: center;
+  justify-content: center;
+  background-color: #8c15d6;
+  border-radius: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.menuIcon {
+  filter: var(--purple);
+  position: relative;
+  z-index: 10;
+  width: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  transition: 0.5s;
+}
+
+.menuItem::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background-color: #ff7373;
+  position: absolute;
+  top: 150px;
+  left: 0px;
+  transition: 0.8s;
+  z-index: 1;
+}
+
+.menuItem:hover::after {
+  top: 0px;
+}
+
+.menuItem:hover {
+  transform: translateY(-8px);
+}
+
+.menuItem:hover .menuIcon {
+  filter: var(--white);
+}
