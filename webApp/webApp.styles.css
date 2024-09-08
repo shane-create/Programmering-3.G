@@ -1,12 +1,14 @@
 :root {
   --purple: invert(79%) sepia(69%) saturate(6996%) hue-rotate(243deg)
     brightness(104%) contrast(101%);
-  --red: invert(66%) sepia(14%) saturate(3798%) hue-rotate(313deg)
-    brightness(98%) contrast(113%);
   --yellow: invert(87%) sepia(34%) saturate(640%) hue-rotate(346deg)
     brightness(104%) contrast(101%);
   --white: invert(94%) sepia(95%) saturate(18%) hue-rotate(297deg)
     brightness(104%) contrast(104%);
+
+  --cream-light: #fee7b5;
+  --cream-dark: #fede95;
+  --red: #ff7373;
 }
 
 * {
@@ -16,9 +18,20 @@
   border: none;
 }
 
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+    90deg,
+    var(--cream-light) 50%,
+    var(--cream-dark) 50%
+  );
+  background-size: 70px 100%;
+}
+
 #menu-background {
-  background-color: #6c0aa8;
   position: fixed;
+  background-color: #6c0aa8;
   width: 100vw;
   height: 16vh;
   border-bottom-left-radius: 100%;
@@ -33,26 +46,6 @@
   grid-template-columns: repeat(5, 1fr);
   justify-items: center;
   align-items: center;
-}
-
-#menu-1 {
-  grid-column: 1 /1;
-}
-
-#menu-2 {
-  grid-column: 2 /2;
-}
-
-#menu-3 {
-  grid-column: 3/3;
-}
-
-#menu-4 {
-  grid-column: 4 /4;
-}
-
-#menu-5 {
-  grid-column: 5 /5;
 }
 
 .menuItem {
@@ -70,12 +63,11 @@
 .menuIcon {
   filter: var(--purple);
   position: relative;
-  z-index: 10;
-  width: 40px;
+  z-index: 1;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 55%;
   transition: 0.5s;
 }
 
@@ -83,12 +75,11 @@
   content: "";
   width: 100px;
   height: 100px;
-  background-color: #ff7373;
+  background-color: var(--red);
   position: absolute;
   top: 150px;
   left: 0px;
-  transition: 0.8s;
-  z-index: 1;
+  transition: 0.5s;
 }
 
 .menuItem:hover::after {
@@ -101,4 +92,29 @@
 
 .menuItem:hover .menuIcon {
   filter: var(--white);
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 25vh;
+  background-color: #bfb89c;
+  display: grid;
+  grid-template-rows: 0.3fr 1fr 3fr;
+}
+
+.floor {
+  width: 100%;
+}
+
+.board {
+  height: 6vh;
+  background-color: #9a6539;
+  grid-row: 2/2;
+}
+
+.boardTop {
+  background-color: #bb8257;
+  grid-row: 1 /1;
 }
