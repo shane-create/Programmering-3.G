@@ -48,34 +48,36 @@
     </div>
 
     <div class="base">
-      <img src="assets/body/base.png" alt="doll body base" id="base" />
+      <img src="assets/body/base.png" alt="doll body base" id="body" />
+      <img src="assets/brows/brow5.png" id="browSlot" class="hiddenSlot" />
+      <img src="assets/eyes/eye2.png" id="eyeSlot" class="hiddenSlot" />
     </div>
 
     <div class="page" id="page1">
-      <div class="closet">
-        <div class="closetside"></div>
-        <div class="closetTop"></div>
-        <div class="closetTopSide"></div>
-        <div class="closetTopTop"></div>
-        <div class="closetBase">
-          <div class="closetInner">
-            <div class="closetInnerBottom"></div>
-            <div class="closetInnerSide"></div>
-          </div>
-          <div class="closetInner">
-            <div class="closetInnerBottom"></div>
-            <div class="closetInnerSide"></div>
-          </div>
-          <div class="closetInner">
-            <div class="closetInnerBottom"></div>
-            <div class="closetInnerSide"></div>
-          </div>
-          <div class="closetInner">
-            <div class="closetInnerBottom"></div>
-            <div class="closetInnerSide"></div>
-          </div>
-        </div>
-      </div>
+      <closet-element
+        inner-count="4"
+        images='[
+        ["assets/brows/brow1.png", 
+        "assets/brows/brow2.png", 
+        "assets/brows/brow3.png", 
+        "assets/brows/brow4.png", 
+        "assets/brows/brow5.png"],
+        ["assets/eyes/eye1.png", 
+        "assets/eyes/eye2.png", 
+        "assets/eyes/eye3.png", 
+        "assets/eyes/eye4.png",
+        "assets/eyes/eye5.png"], 
+        ["assets/noses/nose1.png",
+        "assets/noses/nose2.png",
+        "assets/noses/nose3.png",
+        "assets/noses/nose4.png",
+        "assets/noses/nose5.png"], 
+        ["assets/mouths/mouth1.png",
+        "assets/mouths/mouth2.png",
+        "assets/mouths/mouth3.png",
+        "assets/mouths/mouth4.png",
+        "assets/mouths/mouth5.png"]]'
+      ></closet-element>
     </div>
 
     <div class="page" id="page2"></div>
@@ -87,5 +89,6 @@
       <div class="floor board"></div>
       <div class="floor boardTop"></div>
     </div>
+    <script src="objects.js"></script>
   </body>
 </html>
